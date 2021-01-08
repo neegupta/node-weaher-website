@@ -22,7 +22,7 @@ const forecast = (latitude, longitude, callback) => {
         else {
             const currentTemp = data.current.temperature;
             const feelslike = data.current.feelslike;
-            callback(undefined, "Its currently " + currentTemp + " but it feels like " + feelslike);
+            callback(undefined, "Its currently " + currentTemp + " but it feels like " + feelslike + ". Humidity is " + data.current.humidity);
         }
     }).catch((error) => {
         callback('Unable to connect to weather service!', undefined)
